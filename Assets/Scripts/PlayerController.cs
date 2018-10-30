@@ -38,6 +38,9 @@ public class PlayerController : MonoBehaviour
 
     void Update ()
     {
+        if (Input.GetKey("escape"))
+            Application.Quit();
+
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
